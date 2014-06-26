@@ -29,12 +29,13 @@ public class NextGenTweaks {
     public void load(FMLInitializationEvent event) {
         if (Loader.isModLoaded("ExtraUtilities")) {
             Block enderQuarry = GameRegistry.findBlock("ExtraUtilities", "enderQuarry");
-            removeRecepie(new ItemStack(enderQuarry));        }
+            removeRecipe(new ItemStack(enderQuarry));        
+        }
     }
 
 
-    public void removeRecepie(ItemStack stack){
-        ArrayList recepieList = (ArrayList) CraftingManager.getInstance().getRecipeList();
+    public void removeRecipe(ItemStack stack){
+        ArrayList recipeList = (ArrayList) CraftingManager.getInstance().getRecipeList();
         for (int t = 0; t < recepieList.size(); t++) {
             IRecipe recipe = (IRecipe) recepieList.get(t);
             ItemStack recipeResult = recipe.getRecipeOutput();
