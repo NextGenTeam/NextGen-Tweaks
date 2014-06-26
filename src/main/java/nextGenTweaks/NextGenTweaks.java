@@ -34,9 +34,7 @@ public class NextGenTweaks {
     public void load(FMLInitializationEvent event) {
         if (Loader.isModLoaded("ExtraUtilities")) {
             Block enderQuarry = GameRegistry.findBlock("ExtraUtilities", "enderQuarry");
-            removeRecepie(new ItemStack(enderQuarry));
-            System.out.println();
-        }
+            removeRecepie(new ItemStack(enderQuarry));        }
     }
 
 
