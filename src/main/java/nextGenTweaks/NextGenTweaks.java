@@ -10,7 +10,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "nextgentweaks", name = "NextGen Tweaks", version = "@VERSION@", dependencies = "required-after:ExtraUtilities@{1.1.0b}")
+@Mod(modid = "nextgentweaks", name = "NextGen Tweaks", version = "@VERSION@", dependencies = "required-after:BuildCraft|Energy@{6.0.16};required-after:ExtraUtilities@{1.1.0b}")
 public class NextGenTweaks {
 
 	@EventHandler
