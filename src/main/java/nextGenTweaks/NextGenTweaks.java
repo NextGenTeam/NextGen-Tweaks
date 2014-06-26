@@ -3,7 +3,6 @@ package nextGenTweaks;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -11,7 +10,6 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
-import nextGenTweaks.proxy.CommonProxy;
 
 import java.util.ArrayList;
 
@@ -20,9 +18,6 @@ public class NextGenTweaks {
 
     @Instance
     public static NextGenTweaks instance;
-
-    @SidedProxy(clientSide="nextGenTweaks.proxy.ClientProxy", serverSide="nextGenTweaks.proxy.CommonProxy")
-    public static CommonProxy proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
