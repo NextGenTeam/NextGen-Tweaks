@@ -2,25 +2,21 @@ package nextGenTweaks;
 
 import java.util.List;
 
-import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
-import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "nextgentweaks", name = "NextGen Tweaks", version = "@VERSION@", dependencies = "required-after:ExtraUtilities")
+@Mod(modid = "nextgentweaks", name = "NextGen Tweaks", version = "@VERSION@", dependencies = "required-after:ExtraUtilities@{1.1.0b}")
 public class NextGenTweaks {
 
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
-		if (Loader.isModLoaded("ExtraUtilities")) {
-			Block enderQuarry = GameRegistry.findBlock("ExtraUtilities", "enderQuarry");
-			removeRecipe(new ItemStack(enderQuarry));
-		}
+		removeRecipe(new ItemStack(GameRegistry.findBlock("ExtraUtilities", "enderQuarry")));
+		
 	}
 
 	public void removeRecipe(ItemStack stack) {
