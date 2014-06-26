@@ -26,8 +26,8 @@ buildProps.withReader {
 }
  
 version = "${config.version.mod}"
-group= "com.AEnterprise.BuildcraftAdditions" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "BuildcraftAdditions-1.7.2"
+group= "com.AEnterprise.NextGenTweaks" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "NextGenTweaks"
  
 minecraft {
     version = "${config.version.mc}-${config.version.forge}"
