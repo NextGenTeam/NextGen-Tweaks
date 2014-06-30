@@ -5,6 +5,3 @@ eclipse/
 
 # intelij
 *.iml
-
-build.bat
-update.bat
